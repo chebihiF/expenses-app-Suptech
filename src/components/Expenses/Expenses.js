@@ -1,4 +1,5 @@
 /** @format */
+import NewExpense from "../NewExpense/NewExpense";
 import Card from "../UI/Card";
 import ExpenseItem from "./ExpenseItem";
 import "./Expenses.css";
@@ -6,6 +7,7 @@ import "./Expenses.css";
 const Expenses = ({ expenses }) => {
   return (
     <>
+      <NewExpense />
       <Card className="expenses">
         <ExpenseItem
           title={expenses[0].title}
