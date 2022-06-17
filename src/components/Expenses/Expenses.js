@@ -28,8 +28,6 @@ const Expenses = ({ expenses }) => {
           date={expenses[3].date}
         />
       </Card>
-
-      <Card className="expenses_test">Test</Card>
     </>
   );
 };
