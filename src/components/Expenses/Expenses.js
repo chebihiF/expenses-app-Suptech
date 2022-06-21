@@ -7,7 +7,7 @@ import ExpensesFilter from "./ExpensesFilter";
 import ExpensesList from "./ExpensesList";
 
 const Expenses = ({ expenses }) => {
-  const [filteredYear, setFiltredYear] = useState("2022");
+  const [filteredYear, setFiltredYear] = useState("2021");
 
   const filterChangeHandler = (selectedYear) => {
     setFiltredYear(selectedYear);
@@ -20,7 +20,10 @@ const Expenses = ({ expenses }) => {
   return (
     <>
       <Card className="expenses">
-        <ExpensesFilter onChangeFilter={filterChangeHandler} />
+        <ExpensesFilter
+          selected={filteredYear}
+          onChangeFilter={filterChangeHandler}
+        />
         <ExpensesList expensesContent={filteredExpenses} />
       </Card>
     </>

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import "./ExpenseForm.css";
 
-const ExpenseForm = ({ onSaveExpenseData }) => {
+const ExpenseForm = ({ onSaveExpenseData, onCancle }) => {
   //console.log("Evaluate UI");
 
   const [entredTitle, setEnteredTitle] = useState("");
@@ -78,6 +78,9 @@ const ExpenseForm = ({ onSaveExpenseData }) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="button" onClick={onCancle}>
+          Cancel
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
