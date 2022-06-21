@@ -4,7 +4,7 @@ import { useState } from "react";
 import "./ExpenseForm.css";
 
 const ExpenseForm = ({ onSaveExpenseData }) => {
-  console.log("Evaluate UI");
+  //console.log("Evaluate UI");
 
   const [entredTitle, setEnteredTitle] = useState("");
   const [entredAmount, setEnteredAmount] = useState("");
