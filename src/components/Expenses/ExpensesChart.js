@@ -18,7 +18,7 @@ const ExpensesChart = ({ expenses }) => {
     { label: "Dec", value: 0 },
   ];
 
-  for (const expense in expenses) {
+  for (const expense of expenses) {
     const expenseMonth = expense.date.getMonth(); // 0 : janvier 1: fevrier ...
     chartDataPoints[expenseMonth].value += expense.amount;
   }

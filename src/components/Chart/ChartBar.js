@@ -1,9 +1,12 @@
 /** @format */
 
-const ChartBar = ({ value, maxValue }) => {
+import "./ChartBar.css";
+
+const ChartBar = ({ value, maxValue, label }) => {
+  console.log(label + " " + value);
   let barFillHeight = "0%";
   if (maxValue > 0) {
-    barFillHeight = Math.round((value / max) * 100) + "%";
+    barFillHeight = Math.round((value / maxValue) * 100) + "%";
   }
   return (
     <div className="chart-bar">
@@ -13,7 +16,7 @@ const ChartBar = ({ value, maxValue }) => {
           style={{ height: barFillHeight }}
         ></div>
       </div>
-      <div className="chart-bar__label"></div>
+      <div className="chart-bar__label">{label}</div>
     </div>
   );
 };
